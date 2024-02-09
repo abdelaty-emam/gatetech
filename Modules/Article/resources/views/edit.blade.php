@@ -33,7 +33,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('article.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('article.update',$article->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                          <div class="row">
