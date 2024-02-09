@@ -6,8 +6,6 @@ use Modules\Article\App\Interfaces\ArticleRepositoryInterface;
 use Modules\Article\App\Models\Article;
 use Modules\Article\App\Helpers\UploadeHelper;
 
-
-
 class ArticleRepository implements ArticleRepositoryInterface
 {
     use UploadeHelper;

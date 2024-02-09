@@ -8,9 +8,13 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Modules\Article\App\Http\Requests\CreateArticleRequest;
 use Modules\Article\App\Repositories\ArticleRepository;
+use Modules\Article\App\Helpers\UploadeHelper;
+
 
 class ArticleController extends Controller
 {
+    use UploadeHelper;
+
     protected $articleRepository;
 
     public function __construct(ArticleRepository $articleRepository)
@@ -49,7 +53,7 @@ class ArticleController extends Controller
         }
         $this->articleRepository->store($data);
         return redirect()->route('article.index')
-               ->with('success', 'Post created successfully.');
+               ->with('success', 'created successfully.');
     }
 
     /**
